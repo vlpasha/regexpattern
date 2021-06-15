@@ -1,6 +1,9 @@
 import 'package:regexpattern/regexpattern.dart';
 
 extension StringExtensions on String {
+  /// Hostname regex
+  bool isHostname() => RegVal.hasMatch(this, RegexPattern.hostname);
+
   /// Username regex
   /// Requires minimum 3 character
   /// Allowing "_" and "." in middle of name

@@ -4,6 +4,10 @@
 /// Regex will return false if any of the character not following the pattern, even if using hasMatch function
 /// Example: Pattern : Email -> 'This is your email : test@gmail.com' will return `false`, but 'test@gmail.com' will return `true`
 class RegexPattern {
+  /// Hostname regex
+  static Pattern hostname =
+      r'^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])$';
+
   /// Username regex
   /// Requires minimum 3 character
   /// Allowing "_" and "." in middle of name
